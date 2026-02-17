@@ -1,0 +1,12 @@
+replicaCount: 2
+image: "your-registry.azurecr.io/sre-app:latest"
+
+# The "SRE Knobs"
+traffic:
+  canaryWeight: 50
+  timeout: 2s
+  maxRetries: 3
+
+security:
+  jwtIssuer: "testing@secure.istio.io"
+  enabled: true
